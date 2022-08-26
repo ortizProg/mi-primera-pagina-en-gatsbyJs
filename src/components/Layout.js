@@ -2,7 +2,7 @@ import * as React from 'react';
 import {Link, graphql, useStaticQuery} from "gatsby";
 import {layoutContainer} from './styles/Layout.module.css'
 
-const Layout = (props) => {
+const Layout = ({children}) => {
 
   const data = (graphql`
     query {
@@ -19,7 +19,7 @@ const Layout = (props) => {
 
   return (
     <div className={layoutContainer}>
-        {props.children}
+        {children}
     </div>
     
   )

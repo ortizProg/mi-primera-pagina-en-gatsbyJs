@@ -8,21 +8,13 @@ import Seo from "../../components/Seo";
 import SideNavBar from "../../components/SideNavBar";
 import { contentContainer } from "../../components/styles/Layout.module.css";
 import { graphql, Link } from "gatsby";
+import EstructuraDocs from "../../components/EstructuraDocs";
 
 const DocumentacionBlock = ({ data, children }) => {
   return (
-    <React.Fragment>
-            <NavBar srcImg={LogoEmpresa} />
-            <main>
-                <SubNavBar title="Documentación" />
-                <section className={contentContainer}>
-                    <SideNavBar />
-                    <Layout pageTitle="MET Documentation">
-                      {children}
-                    </Layout>
-                </section>
-            </main>
-        </React.Fragment>
+    <EstructuraDocs>
+      {children}
+    </EstructuraDocs>
   )
 }
 export const query = graphql`
@@ -35,5 +27,5 @@ export const query = graphql`
     }
   }
 `
-export const Head = () => <Seo title="Documentación | Met" />
+export const Head = () => <Seo title="Como | Met" />
 export default DocumentacionBlock;
