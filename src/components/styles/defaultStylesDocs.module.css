@@ -1,5 +1,7 @@
 .docs-title {
 
+    color: var(--primary-color);
+    text-decoration: none;
     font-size: var(--font-title);
 
 }
