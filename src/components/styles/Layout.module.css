@@ -1,0 +1,28 @@
+.layout-container {
+
+    width: 70%;
+    height: 100vh;
+    padding-top: 60px;
+    padding-left: 70px;
+    /* Estilos de bordes */
+    border-left: 1px solid rgb(202, 202, 202);
+
+}
+.title {
+
+    font-size: 3.5rem;
+
+}
+.content-container {
+
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+
+}
+.layout-container-full {
+
+    width: 100vw;
+    height: calc(100vh - 250px);
+
+}

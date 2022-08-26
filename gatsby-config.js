@@ -1,7 +1,16 @@
 module.exports = {
   siteMetadata: {
-    title: `mi-primera-pagina-en-gastbyJs`,
+    title: `My page`,
     siteUrl: `https://www.yourdomain.tld`,
   },
-  plugins: [],
+  plugins: ["gatsby-plugin-image", "gatsby-plugin-sharp",
+  {
+    resolve: `gatsby-source-filesystem`,
+    options: {
+      name: `pages`,
+      path: `${__dirname}/src/pages/`,
+    },
+  },
+  `gatsby-plugin-mdx`,
+],
 }

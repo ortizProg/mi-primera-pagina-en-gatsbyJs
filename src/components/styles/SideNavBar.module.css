@@ -1,0 +1,55 @@
+.side-nav-bar-container {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 300px;
+    min-width: 200px;
+    width: 40%;
+    height: 100vh;
+    min-height: calc;
+    
+
+
+}
+.side-nav-bar {
+
+    width: 80%;
+    height: 200px;
+    padding: 0px 35px;
+
+}
+.side-nav-bar-title-container {
+
+    position: relative;
+    width: 100%;
+    display: flex;
+    margin-top: 20px;
+
+}
+.side-nav-bar-icon {
+
+    position: absolute;
+    bottom: -10px;
+    left: -35px;
+
+}
+.side-nav-bar-title {
+
+    margin-top: 60px;
+    
+
+}
+.side-nav-bar-item {
+
+    list-style: none;
+    margin-top: 20px;
+
+}
+.side-nav-bar-text {
+
+    font-size: var(--font-regular);
+    color: #000;
+    text-decoration: none;
+
+}
