@@ -1,4 +1,5 @@
 import * as React from 'react';
+import './styles/defaultStylesMDX.css';
 import {Link, graphql, useStaticQuery} from "gatsby";
 import {layoutContainer} from './styles/Layout.module.css'
 

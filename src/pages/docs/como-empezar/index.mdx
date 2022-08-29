@@ -1,0 +1,25 @@
+---
+positionBar: 1
+title: "Como Empezar En El Proyecto"
+slug: "como-empezar"
+---
+
+# Introduction
+
+ A greater than… In [MDX](https://mdxjs.com "title"), you used the `gatsby-source-filesystem` source plugin to build a Blog page that lists the names of your blog post files. But you weren't able to actually render the contents of your post files, because `gatsby-source-filesystem` doesn't provide a field for it. To do that, you'll need another type of plugin called a **transformer plugin**.
+Sometimes, the format of the data you get from source plugins isn’t exactly what you want to use to build your website. For example, the filesystem source plugin lets you query data *about* files, but it doesn't let you use the data *inside* the files themselves. To make this possible, Gatsby supports transformer plugins, which take the raw content from source plugins and transform it into something more usable.
+
+
+In this part of the Tutorial, you'll learn about one particular transformer plugin, `gatsby-plugin-mdx`, which lets you use [MDX](https://mdxjs.com/), a file format that allows Markdown and JSX alongside your text content. (Fun fact: this Tutorial is actually written in MDX!) You'll use MDX to add some content to your blog post files, and then you'll use `gatsby-plugin-mdx` to render the contents of your posts on your Blog page.
+
+
+
+```js
+backtick.fences('for blocks')
+```
+\
+
+**Note:** Usually, transformer plugin names start with `gatsby-transformer-`. (`gatsby-plugin-mdx` is one exception to this convention.)
+
+To see a list of other transformer plugins, try searching for `gatsby-transformer-` in the [Gatsby Plugin Library](/plugins/).
+

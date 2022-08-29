@@ -1,13 +1,7 @@
 import React from "react";
-import LogoEmpresa from '../../images/MetLogo.png';
-import Layout from "../../components/Layout";
 import '../../components/styles/defaultStyles.css'
-import NavBar from "../../components/NavBar";
-import SubNavBar from "../../components/SubNavBar";
 import Seo from "../../components/Seo";
-import SideNavBar from "../../components/SideNavBar";
-import { contentContainer } from "../../components/styles/Layout.module.css";
-import { graphql, Link } from "gatsby";
+import { graphql} from "gatsby";
 import { docsTitle, docsColorBlue, docsTextReduceContainer, docsTextDescript, cardContainer, cardTitle, cardText, cardBtn, cardsContainer} from "../../components/styles/defaultStylesDocs.module.css";
 import EstructuraDocs from "../../components/EstructuraDocs";
 

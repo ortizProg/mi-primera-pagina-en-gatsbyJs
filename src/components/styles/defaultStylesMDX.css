@@ -1,0 +1,17 @@
+h1 {
+
+    font-size: var(--font-title);
+    color: var(--primary-color);
+
+}
+h2 {
+
+    font-size: var(--font-subtitle);
+    color: var(--primary-color);
+
+}
+p {
+
+    font-size: var(--font-regular);
+
+}

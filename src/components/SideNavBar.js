@@ -1,8 +1,9 @@
 import * as React from 'react'
 import { useStaticQuery, graphql, Link } from 'gatsby'
-import {sideNavBarContainer, sideNavBar, sideNavBarTitle, sideNavBarItem, sideNavBarText, sideNavBarTitleContainer, sideNavBarIcon} from './styles/SideNavBar.module.css';
+import arrow from '../images/arrow.png';
+import {sideNavBarContainer, sideNavBar, inputCheck, childrenNavBar, menuArrow, sideNavBarItemShow, sideNavBarTitle, sideNavBarItem, sideNavBarText, sideNavBarTitleContainer, sideNavBarIcon} from './styles/SideNavBar.module.css';
 
-const SideNavBar = ({children}) => {
+const SideNavBar = ({data, children}) => {
 
     return(
         <div className={sideNavBarContainer}>
@@ -16,18 +17,181 @@ const SideNavBar = ({children}) => {
                     </Link>
                 </div>
                 <li className={sideNavBarItem}>
-                        <Link className={sideNavBarText} to={`/docs/como-empezar`}>Como empezar</Link>
-                      </li>
-                      <li className={sideNavBarItem}>
-                        <Link className={sideNavBarText} to={`/docs/framework`}>Framework</Link>
-                      </li>
-                      <li className={sideNavBarItem}>
-                        <Link className={sideNavBarText} to={`/docs/Tonces`}>Edición</Link>
+                    <Link className={sideNavBarText} to={`/docs/`}>Visión general</Link>
+                </li>
+                <li className={sideNavBarItem}>
+                    <Link className={sideNavBarText} to={`/docs/como-empezar`}>Como empezar</Link>
+                </li>
+                <li className={sideNavBarItem}>
+                    <input className={inputCheck} type="checkbox" id="navFramework" name="navFramework" />
+                    <div className={sideNavBarItemShow}>
+                        <label className={sideNavBarText} htmlFor="navFramework">FRAMEWORK</label>
+                        <span className={sideNavBarIcon}>
+                            <img className={menuArrow} src={arrow} />
+                        </span>
+                    </div>
+                    <ul className={childrenNavBar}>
+                        <li className={sideNavBarItem}>
+                            <Link className={sideNavBarText} to={`/docs/framework`}>Visión general</Link>
+                        </li>
+                        <li className={sideNavBarItem}>
+                            <Link className={sideNavBarText} to={`/docs/framework/como-empezar`}>Como empezar</Link>
+                        </li>
+                        <li className={sideNavBarItem}>
+                            <Link className={sideNavBarText} to={`/docs/framework/como-empezar`}>Como modificarlo</Link>
+                        </li>
+                    </ul>
+                </li>
+                <li className={sideNavBarItem}>
+                    <input className={inputCheck} type="checkbox" id="navCloud" name="navCloud" />
+                    <div className={sideNavBarItemShow}>
+                        <label className={sideNavBarText} htmlFor="navCloud">METCLOUD</label>
+                        <span className={sideNavBarIcon}>
+                            <img className={menuArrow} src={arrow} />
+                        </span>
+                    </div>
+                    <ul className={childrenNavBar}>
+                        <li className={sideNavBarItem}>
+                            <Link className={sideNavBarText} to={`/docs/metcloud/como-empezar`}>Visión general</Link>
+                        </li>
+                        <li className={sideNavBarItem}>
+                            <Link className={sideNavBarText} to={`/docs/metcloud/como-empezar`}>Como utilizarlo</Link>
+                        </li>
+                        <li className={sideNavBarItem}>
+                            <Link className={sideNavBarText} to={`/docs/metcloud/como-empezar`}>Como modificarlo</Link>
+                        </li>
+                    </ul>
+                </li>
+                <li className={sideNavBarItem}>
+                    <input className={inputCheck} type="checkbox" id="metVoa" name="metVoa" />
+                    <div className={sideNavBarItemShow}>
+                        <label className={sideNavBarText} htmlFor="metVoa">METVOA</label>
+                        <span className={sideNavBarIcon}>
+                            <img className={menuArrow} src={arrow} />
+                        </span>
+                    </div>
+                    <ul className={childrenNavBar}>
+                        <li className={sideNavBarItem}>
+                            <Link className={sideNavBarText} to={`/docs/metvoa/como-empezar`}>Visión general</Link>
+                        </li>
+                        <li className={sideNavBarItem}>
+                            <Link className={sideNavBarText} to={`/docs/metvoa/como-empezar`}>Como utilizarlo</Link>
+                        </li>
+                        <li className={sideNavBarItem}>
+                            <Link className={sideNavBarText} to={`/docs/metvoa/como-empezar`}>Como modificarlo</Link>
+                        </li>
+                    </ul>
+                </li>
+                <li className={sideNavBarItem}>
+                    <input className={inputCheck} type="checkbox" id="metPay" name="metPay" />
+                    <div className={sideNavBarItemShow}>
+                        <label className={sideNavBarText} htmlFor="metPay">METPAY</label>
+                        <span className={sideNavBarIcon}>
+                            <img className={menuArrow} src={arrow} />
+                        </span>
+                    </div>
+                    <ul className={childrenNavBar}>
+                        <li className={sideNavBarItem}>
+                            <Link className={sideNavBarText} to={`/docs/metpay/como-empezar`}>Visión general</Link>
+                        </li>
+                        <li className={sideNavBarItem}>
+                            <Link className={sideNavBarText} to={`/docs/metpay/como-empezar`}>Como utilizarlo</Link>
+                        </li>
+                        <li className={sideNavBarItem}>
+                            <Link className={sideNavBarText} to={`/docs/metpay/como-empezar`}>Como modificarlo</Link>
+                        </li>
+                    </ul>
+                </li>
+                <li className={sideNavBarItem}>
+                    <input className={inputCheck} type="checkbox" id="metBia" name="metBia" />
+                    <div className={sideNavBarItemShow}>
+                        <label className={sideNavBarText} htmlFor="metBia">METBIA</label>
+                        <span className={sideNavBarIcon}>
+                            <img className={menuArrow} src={arrow} />
+                        </span>
+                    </div>
+                    <ul className={childrenNavBar}>
+                        <li className={sideNavBarItem}>
+                            <Link className={sideNavBarText} to={`/docs/metbia/como-empezar`}>Visión general</Link>
+                        </li>
+                        <li className={sideNavBarItem}>
+                            <Link className={sideNavBarText} to={`/docs/metbia/como-empezar`}>Como utilizarlo</Link>
+                        </li>
+                        <li className={sideNavBarItem}>
+                            <Link className={sideNavBarText} to={`/docs/metbia/como-empezar`}>Como modificarlo</Link>
+                        </li>
+                    </ul>
+                </li>
+                <li className={sideNavBarItem}>
+                    <input className={inputCheck} type="checkbox" id="metsus" name="metsus" />
+                    <div className={sideNavBarItemShow}>
+                        <label className={sideNavBarText} htmlFor="metsus">METBIASUS</label>
+                        <span className={sideNavBarIcon}>
+                            <img className={menuArrow} src={arrow} />
+                        </span>
+                    </div>
+                    <ul className={childrenNavBar}>
+                        <li className={sideNavBarItem}>
+                            <Link className={sideNavBarText} to={`/docs/metsus/como-empezar`}>Visión general</Link>
+                        </li>
+                        <li className={sideNavBarItem}>
+                            <Link className={sideNavBarText} to={`/docs/metsus/como-empezar`}>Como utilizarlo</Link>
+                        </li>
+                        <li className={sideNavBarItem}>
+                            <Link className={sideNavBarText} to={`/docs/metsus/como-empezar`}>Como modificarlo</Link>
+                        </li>
+                    </ul>
+                </li>
+                <li className={sideNavBarItem}>
+                    <input className={inputCheck} type="checkbox" id="metmda" name="metmda" />
+                    <div className={sideNavBarItemShow}>
+                        <label className={sideNavBarText} htmlFor="metmda">METMDA</label>
+                        <span className={sideNavBarIcon}>
+                            <img className={menuArrow} src={arrow} />
+                        </span>
+                    </div>
+                    <ul className={childrenNavBar}>
+                        <li className={sideNavBarItem}>
+                            <Link className={sideNavBarText} to={`/docs/metmda/como-empezar`}>Visión general</Link>
+                        </li>
+                        <li className={sideNavBarItem}>
+                            <Link className={sideNavBarText} to={`/docs/metmda/como-empezar`}>Como utilizarlo</Link>
+                        </li>
+                        <li className={sideNavBarItem}>
+                            <Link className={sideNavBarText} to={`/docs/metmda/como-empezar`}>Como modificarlo</Link>
+                        </li>
+                    </ul>
+                </li>
+                <li className={sideNavBarItem}>
+                    <input className={inputCheck} type="checkbox" id="voa18" name="voa18" />
+                    <div className={sideNavBarItemShow}>
+                        <label className={sideNavBarText} htmlFor="voa18">VOAS/18</label>
+                        <span className={sideNavBarIcon}>
+                            <img className={menuArrow} src={arrow} />
+                        </span>
+                    </div>
+                    <ul className={childrenNavBar}>
+                        <li className={sideNavBarItem}>
+                            <Link className={sideNavBarText} to={`/docs/voa18/como-empezar`}>Visión general</Link>
+                        </li>
+                        <li className={sideNavBarItem}>
+                            <Link className={sideNavBarText} to={`/docs/voa18/como-empezar`}>Como utilizarlo</Link>
+                        </li>
+                        <li className={sideNavBarItem}>
+                            <Link className={sideNavBarText} to={`/docs/voa18/como-empezar`}>Como modificarlo</Link>
+                        </li>
+                    </ul>
+                </li>
+                
+                
+                <li className={sideNavBarItem}>
+                    <Link className={sideNavBarText} to={`/docs/Tonces`}>Edición</Link>
                 </li>
             </ul>
         </div>
     )
 
 }
+
 
 export default SideNavBar;
