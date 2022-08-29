@@ -11,3 +11,4 @@ const ImgMDX = ({ruta}) => {
 }
 
 export default ImgMDX;
+
