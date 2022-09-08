@@ -1,7 +1,8 @@
 .layout-container {
 
     width: 70%;
-    height: 100vh;
+    min-height: 100vh;
+    height: fit-content;
     padding-top: 60px;
     padding-left: 70px;
     /* Estilos de bordes */

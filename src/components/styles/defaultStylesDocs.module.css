@@ -1,5 +1,7 @@
 .docs-title {
 
+    color: var(--primary-color);
+    text-decoration: none;
     font-size: var(--font-title);
 
 }
@@ -17,7 +19,7 @@
 .card-container {
 
     width: 300px;
-    height: 150px;
+    height: 200px;
     background-color: var(--primary-color);
     padding: 20px;
     /* edicion de bordes */

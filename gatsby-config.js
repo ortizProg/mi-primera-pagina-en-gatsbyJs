@@ -3,7 +3,8 @@ module.exports = {
     title: `My page`,
     siteUrl: `https://www.yourdomain.tld`,
   },
-  plugins: ["gatsby-plugin-image", "gatsby-plugin-sharp",
+  plugins: ["gatsby-plugin-image",
+  "gatsby-plugin-sharp",
   {
     resolve: `gatsby-source-filesystem`,
     options: {
@@ -11,6 +12,7 @@ module.exports = {
       path: `${__dirname}/src/pages/`,
     },
   },
-  `gatsby-plugin-mdx`,
+  `gatsby-plugin-mdx`
+  
 ],
 }
